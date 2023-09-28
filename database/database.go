@@ -8,10 +8,9 @@ import (
 	"log"
 	"os"
 
-	"go.mongodb+srv://Technosat3825:technosat3825@cluster0.pcuntrx.mongodb.net/?retryWrites=true&w=majority"
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-)
 
 var cachedSettings map[int64]*ChatSettings = make(map[int64]*ChatSettings)
 var defaultChatSettings ChatSettings = ChatSettings{
